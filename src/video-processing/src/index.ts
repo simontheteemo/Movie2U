@@ -7,6 +7,7 @@ import { GetObjectCommand, S3Client } from '@aws-sdk/client-s3';
 import { StartTranscriptionJobCommand, TranscribeClient } from '@aws-sdk/client-transcribe';
 import { DynamoDBDocumentClient, PutCommand } from '@aws-sdk/lib-dynamodb';
 import { S3Event } from 'aws-lambda';
+import { GetParameterCommand, SSMClient } from "@aws-sdk/client-ssm";
 
 const s3Client = new S3Client({});
 const rekognition = new RekognitionClient({});
@@ -17,6 +18,16 @@ const mediaconvert = new MediaConvertClient({
 });
 const transcribe = new TranscribeClient({ region: process.env.AWS_REGION });
 const polly = new PollyClient({ region: process.env.AWS_REGION });
+
+const ssm = new SSMClient({});
+const PROMPT_PARAM_PATH = "/video-analysis/prompts/comprehensive-narrative";
+
+async function getPromptTemplate(): Promise<string> {
+    const response = await ssm.send(new GetParameterCommand({
+        Name: PROMPT_PARAM_PATH
+    }));
+    return response.Parameter?.Value ?? "";
+}
 
 interface VideoAnalysis {
     videoId: string;
@@ -89,7 +100,7 @@ async function getTranscription(transcriptionPath: string): Promise<string> {
 }
 
 async function generateComprehensiveNarrative(labels: any[], transcript: string): Promise<string> {
-    const scenes = labels.reduce((acc: any, label: any) => {
+    const scenes = labels.reduce((acc: Record<number, string[]>, label: any) => {
         const timestamp = Math.floor((label.Timestamp || 0) / 1000);
         if (!acc[timestamp]) {
             acc[timestamp] = [];
@@ -100,37 +111,26 @@ async function generateComprehensiveNarrative(labels: any[], transcript: string)
         return acc;
     }, {});
 
+    const sceneDescription = Object.entries(scenes)
+        .map(([time, labels]) => 
+            `At ${time} seconds: ${labels.join(', ')}`)
+        .join('\n');
+
+    const promptTemplate = await getPromptTemplate();
+    
     const body = {
         anthropic_version: "bedrock-2023-05-31",
         max_tokens: 1000,
-        top_k: 250,
-        stop_sequences: [],
         temperature: 0.7,
         top_p: 0.999,
-        messages: [
-            {
-                role: "user",
-                content: [
-                    {
-                        type: "text",
-                        text: `You are an assistant helping blind people understand videos. Create a comprehensive narrative combining visual elements and spoken dialogue.
-
-Visual elements by timestamp:
-${Object.entries(scenes)
-                                .map(([time, labels]) => `At ${time} seconds: ${(labels as string[]).join(', ')}`)
-                                .join('\n')}
-
-Spoken dialogue: "${transcript}"
-
-Create a flowing narrative that:
-1. Describes the visual scenes and actions
-2. Integrates the spoken dialogue naturally
-3. Maintains temporal alignment between visual elements and speech
-4. Provides context that helps visualize the complete scene`
-                    }
-                ]
-            }
-        ]
+        messages: [{
+            role: "user",
+            content: [{
+                type: "text",
+                text: promptTemplate.replace('{sceneDescription}', sceneDescription)
+                                  .replace('{transcript}', transcript)
+            }]
+        }]
     };
 
     try {
@@ -142,12 +142,7 @@ Create a flowing narrative that:
         }));
 
         const responseData = JSON.parse(new TextDecoder().decode(response.body));
-        const narrative = responseData.messages?.[0]?.content?.[0]?.text
-            || responseData.content?.[0]?.text
-            || 'No narrative generated';
-
-        console.log('Generated comprehensive narrative:', narrative);
-        return narrative;
+        return responseData.messages?.[0]?.content?.[0]?.text ?? 'No narrative generated';
     } catch (error) {
         console.error('Error generating comprehensive narrative:', error);
         return 'Error generating comprehensive narrative';

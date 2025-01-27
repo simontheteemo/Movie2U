@@ -95,6 +95,13 @@ resource "aws_iam_role_policy" "processor" {
           "polly:GetSpeechSynthesisTask"
         ]
         Resource = "*"
+      },
+      {
+        Effect = "Allow"
+        Action = [
+          "ssm:GetParameter"
+        ]
+        Resource = aws_ssm_parameter.narrative_prompt.arn
       }
     ]
   })
@@ -179,4 +186,23 @@ resource "aws_iam_role_policy" "media_output_access" {
       }
     ]
   })
+}
+
+resource "aws_ssm_parameter" "narrative_prompt" {
+  name  = "/video-analysis/prompts/comprehensive-narrative"
+  type  = "SecureString"
+  value = <<EOT
+You are an assistant helping blind people understand videos. Create a comprehensive narrative combining visual elements and spoken dialogue.
+
+Visual elements by timestamp:
+{sceneDescription}
+
+Spoken dialogue: "{transcript}"
+
+Create a flowing narrative that:
+1. Describes the visual scenes and actions
+2. Integrates the spoken dialogue naturally
+3. Maintains temporal alignment between visual elements and speech
+4. Provides context that helps visualize the complete scene
+EOT
 }
