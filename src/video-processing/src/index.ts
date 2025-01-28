@@ -47,7 +47,13 @@ interface VideoAnalysis {
 
 async function generateAudioNarration(videoId: string, text: string, timestamp: number): Promise<string> {
     const outputKey = `narration/${videoId}-${timestamp}.mp3`;
-    
+
+    console.log('Text being sent to Polly:', text);
+    // Add validation
+    if (!text || text.trim().length === 0) {
+        throw new Error('Empty or invalid text input for narration');
+    }
+
     try {
         const params = {
             Engine: "neural" as const,
@@ -62,10 +68,16 @@ async function generateAudioNarration(videoId: string, text: string, timestamp: 
 
         console.log('Starting Polly synthesis task');
         const response = await polly.send(new StartSpeechSynthesisTaskCommand(params));
-        
+
         if (!response.SynthesisTask?.OutputUri) {
             throw new Error('No output URI from Polly task');
         }
+
+        console.log('Polly task details:', {
+            taskId: response.SynthesisTask.TaskId,
+            status: response.SynthesisTask.TaskStatus,
+            outputUri: response.SynthesisTask.OutputUri
+        });
 
         console.log('Polly task started:', response.SynthesisTask.TaskId);
         return outputKey;
@@ -77,7 +89,7 @@ async function generateAudioNarration(videoId: string, text: string, timestamp: 
 
 async function getTranscription(transcriptionPath: string): Promise<string> {
     try {
-        
+
         console.log('Getting transcription from:', transcriptionPath);
         await new Promise(resolve => setTimeout(resolve, 60000));
         console.log('waiting 1 minute for transcription to be ready');
@@ -112,12 +124,12 @@ async function generateComprehensiveNarrative(labels: any[], transcript: string)
     }, {});
 
     const sceneDescription = Object.entries(scenes)
-        .map(([time, labels]) => 
+        .map(([time, labels]) =>
             `At ${time} seconds: ${labels.join(', ')}`)
         .join('\n');
 
     const promptTemplate = await getPromptTemplate();
-    
+
     const body = {
         anthropic_version: "bedrock-2023-05-31",
         max_tokens: 1000,
@@ -128,7 +140,7 @@ async function generateComprehensiveNarrative(labels: any[], transcript: string)
             content: [{
                 type: "text",
                 text: promptTemplate.replace('{sceneDescription}', sceneDescription)
-                                  .replace('{transcript}', transcript)
+                    .replace('{transcript}', transcript)
             }]
         }]
     };
@@ -296,14 +308,14 @@ async function generateNarrative(labels: any[]): Promise<string> {
 export const handler = async (event: S3Event): Promise<void> => {
     try {
         console.log('Processing video analysis event:', JSON.stringify(event, null, 2));
-        
+
 
         for (const record of event.Records) {
             const bucket = record.s3.bucket.name;
             const key = decodeURIComponent(record.s3.object.key.replace(/\+/g, ' '));
             const videoId = key.split('/').pop()?.split('.')[0] || 'unknown';
             const timestamp = Date.now();
-            
+
             console.log(`Processing video with timestamp: ${timestamp} from bucket: ${bucket}, key: ${key}`);
 
             // extract audio and start label detection
@@ -324,7 +336,7 @@ export const handler = async (event: S3Event): Promise<void> => {
 
             // Wait for transcription job to complete (you might want to add a wait function here)
             const transcript = await getTranscription(transcriptionPath);
-            
+
             // Get analysis results
             const labels = await waitForLabelDetection(labelDetectionJob.JobId);
 
@@ -336,7 +348,7 @@ export const handler = async (event: S3Event): Promise<void> => {
 
             // Generate audio narration
             const narrationAudioPath = await generateAudioNarration(videoId, comprehensiveNarrative, timestamp);
-            
+
             // Save results to DynamoDB
             const analysis: VideoAnalysis = {
                 videoId,
