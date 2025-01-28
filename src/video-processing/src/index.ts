@@ -152,7 +152,7 @@ async function generateComprehensiveNarrative(labels: any[], transcript: string)
             contentType: 'application/json',
             accept: 'application/json',
         }));
-
+        console.log("Bedrock ComprehensiveNarrative response:", response);
         const responseData = JSON.parse(new TextDecoder().decode(response.body));
         return responseData.messages?.[0]?.content?.[0]?.text ?? 'No narrative generated';
     } catch (error) {
