@@ -129,6 +129,7 @@ async function generateComprehensiveNarrative(labels: any[], transcript: string)
         .join('\n');
 
     const promptTemplate = await getPromptTemplate();
+    console.log('Prompt template:', promptTemplate);
 
     const body = {
         anthropic_version: "bedrock-2023-05-31",
