@@ -16,7 +16,7 @@ description: Movie2U Deployment Guide
 1. AWS Account
 2. GitHub Account
 3. Installed Tools:
-   - Node.js 18+
+   - Node.js 24
    - Terraform
    - AWS CLI
 
