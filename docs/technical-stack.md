@@ -24,7 +24,7 @@ description: Movie2U Technical Stack
 
 ## Development
 - **Language**: TypeScript
-- **Runtime**: Node.js 18.x
+- **Runtime**: Node.js 22.x
 - **Infrastructure**: Terraform
 - **CI/CD**: GitHub Actions
 

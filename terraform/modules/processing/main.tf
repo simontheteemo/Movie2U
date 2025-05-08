@@ -119,7 +119,7 @@ resource "aws_lambda_function" "processor" {
   function_name = "${var.resource_prefix}-processor"
   role          = aws_iam_role.processor.arn
   handler       = "index.handler"
-  runtime       = "nodejs18.x"
+  runtime       = "nodejs22.x"
   timeout       = 900
   memory_size   = 256
 
