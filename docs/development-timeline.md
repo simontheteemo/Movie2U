@@ -22,6 +22,7 @@ description: Movie2U Development Journey from Idea to Current State
 - **Vision**: Create a serverless application to enhance video accessibility for blind or visually impaired users
 - **Core Concept**: Combine visual analysis with audio processing to generate comprehensive video descriptions
 
+
 ### 📋 Foundation Planning
 - **README Updates (c96b3d5)**: Defined project scope and objectives
 - **Problem Statement**: Address the lack of accessible video content descriptions
