@@ -4,13 +4,13 @@ title: Development Timeline
 description: Movie2U Development Journey from Idea to Current State
 ---
 
-[Home](./README.md) |
-[Architecture](./architecture.md) |
-[Technical Stack](./technical-stack.md) |
-[Deployment](./deployment.md) |
-[Demo](./demo.md) |
-[Development Timeline](./development-timeline.md) |
-[Future Roadmap](./future-roadmap.md)
+[Home](././) |
+[Architecture](.architecture) |
+[Technical Stack](.technical-stack) |
+[Deployment](.deployment) |
+[Demo](.demo) |
+[Development Timeline](.development-timeline) |
+[Future Roadmap](.future-roadmap)
 
 # Movie2U Development Timeline
 

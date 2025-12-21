@@ -4,16 +4,16 @@ title: Project Overview
 description: Movie2U Complete Development Plan and Vision
 ---
 
-[Home](./README.md) |
-[Architecture](./architecture.md) |
-[Technical Stack](./technical-stack.md) |
-[Deployment](./deployment.md) |
-[Demo](./demo.md) |
-[Development Timeline](./development-timeline.md) |
-[Future Roadmap](./future-roadmap.md) |
-[Development Methodology](./development-methodology.md) |
-[Testing Strategy](./testing-strategy.md) |
-[Project Overview](./project-overview.md)
+[Home](././) |
+[Architecture](.architecture) |
+[Technical Stack](.technical-stack) |
+[Deployment](.deployment) |
+[Demo](.demo) |
+[Development Timeline](.development-timeline) |
+[Future Roadmap](.future-roadmap) |
+[Development Methodology](.development-methodology) |
+[Testing Strategy](.testing-strategy) |
+[Project Overview](.project-overview)
 
 # Movie2U: Complete Development Plan
 

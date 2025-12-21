@@ -4,13 +4,13 @@ title: Future Roadmap
 description: Movie2U Future Development Strategy and Roadmap
 ---
 
-[Home](./README.md) |
-[Architecture](./architecture.md) |
-[Technical Stack](./technical-stack.md) |
-[Deployment](./deployment.md) |
-[Demo](./demo.md) |
-[Development Timeline](./development-timeline.md) |
-[Future Roadmap](./future-roadmap.md)
+[Home](././) |
+[Architecture](.architecture) |
+[Technical Stack](.technical-stack) |
+[Deployment](.deployment) |
+[Demo](.demo) |
+[Development Timeline](.development-timeline) |
+[Future Roadmap](.future-roadmap)
 
 # Movie2U Future Roadmap
 

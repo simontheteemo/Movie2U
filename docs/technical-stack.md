@@ -4,11 +4,11 @@ title: Technical Stack
 description: Movie2U Technical Stack
 ---
 
-[Home](./README.md) | 
-[Architecture](./architecture.md) | 
-[Technical Stack](./technical-stack.md) | 
-[Deployment](./deployment.md) | 
-[Demo](./demo.md)
+[Home](././) | 
+[Architecture](.architecture) | 
+[Technical Stack](.technical-stack) | 
+[Deployment](.deployment) | 
+[Demo](.demo)
 
 # Technical Stack
 

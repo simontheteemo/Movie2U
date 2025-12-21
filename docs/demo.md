@@ -4,11 +4,11 @@ title: Demo
 description: Movie2U Input/Output Examples
 ---
 
-[Home](./README.md) | 
-[Architecture](./architecture.md) | 
-[Technical Stack](./technical-stack.md) | 
-[Deployment](./deployment.md) | 
-[Demo](./demo.md)
+[Home](././) | 
+[Architecture](.architecture) | 
+[Technical Stack](.technical-stack) | 
+[Deployment](.deployment) | 
+[Demo](.demo)
 
 # Demo
 

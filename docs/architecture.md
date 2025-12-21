@@ -4,11 +4,11 @@ title: Architecture
 description: Movie2U System Architecture
 ---
 
-[Home](./README.md) | 
-[Architecture](./architecture.md) | 
-[Technical Stack](./technical-stack.md) | 
-[Deployment](./deployment.md) | 
-[Demo](./demo.md)
+[Home](././) | 
+[Architecture](.architecture) | 
+[Technical Stack](.technical-stack) | 
+[Deployment](.deployment) | 
+[Demo](.demo)
 
 # Movie2U Architecture
 
