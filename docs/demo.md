@@ -4,11 +4,11 @@ title: Demo
 description: Movie2U Input/Output Examples
 ---
 
-[Home](././) | 
-[Architecture](.architecture) | 
-[Technical Stack](.technical-stack) | 
-[Deployment](.deployment) | 
-[Demo](.demo)
+[Home]({{ site.baseurl }}/) |
+[Architecture]({{ site.baseurl }}/architecture) |
+[Technical Stack]({{ site.baseurl }}/technical-stack) |
+[Deployment]({{ site.baseurl }}/deployment) |
+[Demo]({{ site.baseurl }}/demo)
 
 # Demo
 

@@ -4,14 +4,14 @@ title: Development Methodology
 description: Movie2U Development Best Practices and Standards
 ---
 
-[Home](././) |
-[Architecture](.architecture) |
-[Technical Stack](.technical-stack) |
-[Deployment](.deployment) |
-[Demo](.demo) |
-[Development Timeline](.development-timeline) |
-[Future Roadmap](.future-roadmap) |
-[Development Methodology](.development-methodology)
+[Home]({{ site.baseurl }}/) |
+[Architecture]({{ site.baseurl }}/architecture) |
+[Technical Stack]({{ site.baseurl }}/technical-stack) |
+[Deployment]({{ site.baseurl }}/deployment) |
+[Demo]({{ site.baseurl }}/demo) |
+[Development Timeline]({{ site.baseurl }}/development-timeline) |
+[Future Roadmap]({{ site.baseurl }}/future-roadmap) |
+[Development Methodology]({{ site.baseurl }}/development-methodology)
 
 # Development Methodology & Best Practices
 

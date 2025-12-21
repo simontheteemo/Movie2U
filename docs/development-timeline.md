@@ -4,13 +4,13 @@ title: Development Timeline
 description: Movie2U Development Journey from Idea to Current State
 ---
 
-[Home](././) |
-[Architecture](.architecture) |
-[Technical Stack](.technical-stack) |
-[Deployment](.deployment) |
-[Demo](.demo) |
-[Development Timeline](.development-timeline) |
-[Future Roadmap](.future-roadmap)
+[Home]({{ site.baseurl }}/) |
+[Architecture]({{ site.baseurl }}/architecture) |
+[Technical Stack]({{ site.baseurl }}/technical-stack) |
+[Deployment]({{ site.baseurl }}/deployment) |
+[Demo]({{ site.baseurl }}/demo) |
+[Development Timeline]({{ site.baseurl }}/development-timeline) |
+[Future Roadmap]({{ site.baseurl }}/future-roadmap)
 
 # Movie2U Development Timeline
 
