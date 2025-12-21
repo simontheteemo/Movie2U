@@ -1,3 +1,8 @@
+---
+layout: default
+title: Movie2U Documentation
+---
+
 [Home](./) |
 [Architecture](./architecture) |
 [Technical Stack](./technical-stack) |
