@@ -4,18 +4,11 @@ title: Development Proposal
 description: Movie2U Proof of Concept Development Plan for Project Approval
 ---
 
-[Home]({{ site.baseurl }}/) |
-[Architecture]({{ site.baseurl }}/architecture) |
-[Technical Stack]({{ site.baseurl }}/technical-stack) |
-[Deployment]({{ site.baseurl }}/deployment) |
-[Demo]({{ site.baseurl }}/demo) |
-[Development Timeline]({{ site.baseurl }}/development-timeline) |
-[Future Roadmap]({{ site.baseurl }}/future-roadmap)
-
 # Movie2U Development Proposal
 **AI-Powered Video Accessibility Platform**
 
-*Prepared for: Project Stakeholder Review*
+*Prepared for: Miller Consulting Specialist*
+*Prepared by: Xuhao (Development Team Lead)*
 *Status: Awaiting Approval to Proceed*
 *Date: Pre-Implementation Phase*
 
@@ -656,6 +649,7 @@ Movie2U represents a unique opportunity to make video content accessible to mill
 
 ---
 
-*Prepared by: Development Team*
+*Prepared by: Xuhao, Development Team Lead*
+*For: Miller Consulting Specialist*
 *Status: Awaiting Stakeholder Approval*
 *Next Review Date: TBD*
