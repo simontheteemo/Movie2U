@@ -8,8 +8,11 @@ description: Movie2U Proof of Concept Development Plan for Project Approval
 **AI-Powered Video Accessibility Platform**
 
 *Prepared for: Miller Consulting Specialist*
+
 *Prepared by: Xuhao (Development Team Lead)*
+
 *Status: Awaiting Approval to Proceed*
+
 *Date: Pre-Implementation Phase*
 
 ---
@@ -648,8 +651,3 @@ Movie2U represents a unique opportunity to make video content accessible to mill
 **We request approval to proceed with Phase 1** (POC Development) and look forward to demonstrating the platform's capabilities in Month 4.
 
 ---
-
-*Prepared by: Xuhao, Development Team Lead*
-*For: Miller Consulting Specialist*
-*Status: Awaiting Stakeholder Approval*
-*Next Review Date: TBD*

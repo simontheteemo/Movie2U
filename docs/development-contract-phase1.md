@@ -4,9 +4,6 @@ title: Development Contract - Phase 1
 description: Software Development Services Agreement for Movie2U Phase 1 POC
 ---
 
-[Home]({{ site.baseurl }}/) |
-[Development Proposal]({{ site.baseurl }}/development-proposal)
-
 # SOFTWARE DEVELOPMENT SERVICES AGREEMENT
 ## Movie2U Phase 1: Proof of Concept Development
 
