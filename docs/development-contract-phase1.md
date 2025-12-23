@@ -8,8 +8,11 @@ description: Software Development Services Agreement for Movie2U Phase 1 POC
 ## Movie2U Phase 1: Proof of Concept Development
 
 **Contract Reference**: Movie2U-Phase1-POC
-**Effective Date**: [INSERT DATE]
+
+**Effective Date**: _________________________________
+
 **Contract Duration**: 4 months from Effective Date
+
 **Status**: DRAFT - REQUIRES LEGAL REVIEW
 
 ---
@@ -193,8 +196,8 @@ At the end of Month 4, Client will evaluate the POC results and decide:
 ## 4. TIMELINE & SCHEDULE
 
 ### 4.1 Project Duration
-- **Start Date**: [INSERT DATE]
-- **End Date**: [INSERT DATE - 4 months from start]
+- **Start Date**: _________________________________
+- **End Date**: _________________________________
 - **Total Duration**: 16 weeks (4 months)
 
 ### 4.2 Working Hours
@@ -447,7 +450,7 @@ Neither party may assign this Agreement without written consent, except:
 
 ### 12.3 Governing Law
 
-This Agreement shall be governed by the laws of **[INSERT JURISDICTION]**, without regard to conflict of law principles.
+This Agreement shall be governed by the laws of **_________________________________**, without regard to conflict of law principles.
 
 ### 12.4 Dispute Resolution
 
@@ -458,12 +461,12 @@ This Agreement shall be governed by the laws of **[INSERT JURISDICTION]**, witho
 **Step 2: Mediation**
 - If unresolved after 30 days, parties agree to mediation
 - Mediation costs shared equally
-- Mediation location: [INSERT LOCATION]
+- Mediation location: _________________________________
 
 **Step 3: Arbitration/Litigation**
 - If mediation fails, disputes resolved through:
   - [ ] Binding arbitration under AAA rules
-  - [ ] Litigation in courts of [INSERT JURISDICTION]
+  - [ ] Litigation in courts of _________________________________
 
 ### 12.5 Notices
 
@@ -471,16 +474,16 @@ All notices must be in writing and sent to:
 
 **Client**:
 ```
-[Name]
-[Address]
-[Email]
+Name: _________________________________________
+Address: ______________________________________
+Email: ________________________________________
 ```
 
 **Developer**:
 ```
-[Name]
-[Address]
-[Email]
+Name: _________________________________________
+Address: ______________________________________
+Email: ________________________________________
 ```
 
 ### 12.6 Entire Agreement
@@ -584,14 +587,14 @@ For each milestone, Client will verify:
 **Project Team**:
 
 Developer Team:
-- Lead Engineer: [Name, Email, Phone]
-- Backend Engineer: [Name, Email, Phone]
-- DevOps Engineer: [Name, Email, Phone]
+- Lead Engineer: ________________________________
+- Backend Engineer: ________________________________
+- DevOps Engineer: ________________________________
 
 Client Team:
-- Project Owner: [Name, Email, Phone]
-- Technical Contact: [Name, Email, Phone]
-- Business Contact: [Name, Email, Phone]
+- Project Owner: ________________________________
+- Technical Contact: ________________________________
+- Business Contact: ________________________________
 
 ---
 
@@ -610,5 +613,5 @@ Areas requiring particular legal attention:
 ---
 
 *Document Version: 1.0*
-*Last Updated: [INSERT DATE]*
+*Last Updated: _________________________________*
 *Reference: Movie2U Phase 1 POC Development Contract*
