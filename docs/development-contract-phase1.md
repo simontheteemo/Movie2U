@@ -9,9 +9,9 @@ description: Software Development Services Agreement for Movie2U Phase 1 POC
 
 **Contract Reference**: Movie2U-Phase1-POC
 
-**Effective Date**: _________________________________
+**Effective Date**: 15th Feb, 2025
 
-**Contract Duration**: 4 months from Effective Date
+**Contract Duration**: 12 months (March 1, 2025 - February 28, 2026)
 
 **Status**: DRAFT - REQUIRES LEGAL REVIEW
 
@@ -21,10 +21,10 @@ description: Software Development Services Agreement for Movie2U Phase 1 POC
 
 **CLIENT** ("Client" or "Project Owner"):
 ```
-Company/Individual Name: _________________________________
-Address: ________________________________________________
-Email: __________________________________________________
-Representative: _________________________________________
+Company/Individual Name: Miller Consulting Specialist Limited
+Address: 110 Carlton Gore RoadNewmarket, Auckland 1023
+Email: info.millercc@gmail.com
+Representative: Yongchao Dai
 ```
 
 **DEVELOPER** ("Developer" or "Development Team"):
@@ -42,11 +42,11 @@ Lead Engineer: __________________________________________
 ### 1.1 Project Overview
 The Developer agrees to provide software development services to design, develop, and deliver a Proof of Concept (POC) for the Movie2U platform, an AI-powered video accessibility solution that automatically generates audio descriptions for video content.
 
-### 1.2 Phase 1 Scope: Proof of Concept (Months 1-4)
+### 1.2 Phase 1 Scope: Proof of Concept (12 Months - Mar 2025 to Feb 2026)
 
 #### In-Scope Deliverables:
 
-**Sprint 1-4: Foundation (Month 1)**
+**Quarter 1 (Mar-May 2025): Foundation & Core Infrastructure**
 - Infrastructure as Code using Terraform
 - AWS S3 buckets and DynamoDB tables setup
 - IAM roles and security policies configuration
@@ -54,40 +54,49 @@ The Developer agrees to provide software development services to design, develop
 - Lambda function framework with S3 event triggers
 - Basic video metadata extraction
 - CloudWatch logging integration
-
-**Sprint 5-8: Visual Analysis (Month 2)**
 - AWS Rekognition integration for video label detection
 - Label confidence threshold filtering
 - DynamoDB storage for visual analysis results
-- AWS Bedrock integration with Claude 3.5 Sonnet
-- Basic prompt engineering for visual descriptions
-- AI-generated narrative from visual content
 
-**Sprint 9-12: Audio Processing (Month 3)**
+**Quarter 2 (Jun-Aug 2025): AI Integration & Audio Processing**
+- AWS Bedrock integration with Claude 3.5 Sonnet
+- Advanced prompt engineering for visual descriptions
+- AI-generated narrative from visual content
 - AWS MediaConvert integration for audio extraction
 - Support for multiple video formats
 - AWS Transcribe integration for speech-to-text
 - Audio transcription job management
 - Storage of transcripts in S3 and metadata in DynamoDB
 
-**Sprint 13-16: Multi-Modal Synthesis (Month 4)**
+**Quarter 3 (Sep-Nov 2025): Multi-Modal Synthesis & Optimization**
 - Combined visual and audio analysis pipeline
 - Temporal alignment of visual and audio data
 - Context-aware AI narrative generation
 - AWS Polly integration for text-to-speech narration
-- End-to-end processing pipeline completion
-- POC demo with sample videos
-- Performance and cost analysis report
+- End-to-end processing pipeline optimization
+- Performance tuning and cost optimization
+- Error handling improvements
+- Processing efficiency enhancements
+
+**Quarter 4 (Dec 2025-Feb 2026): Production Readiness & Refinement**
+- Production-grade error handling and retry mechanisms
+- Advanced monitoring and alerting systems
+- Scalability improvements
+- Security hardening and best practices implementation
+- Comprehensive testing with diverse video content
+- POC demo with extensive sample videos
+- Final performance and cost analysis report
+- Documentation completion and knowledge transfer
 
 #### Out of Scope (Future Phases):
-- Production-grade error handling and retry mechanisms
 - Web user interface or API gateway
-- Multi-language support
-- Advanced monitoring and alerting systems
-- Security audit and compliance certification
-- User authentication and authorization
+- Multi-language support beyond English
+- Security audit and compliance certification (SOC2, HIPAA, etc.)
+- User authentication and authorization system
 - Real-time processing capabilities
-- Production deployment and hosting support
+- Full production deployment and 24/7 hosting support
+- Enterprise-grade SLA guarantees
+- Commercial licensing and distribution
 
 ### 1.3 Technical Specifications
 
@@ -118,12 +127,12 @@ The Developer agrees to provide software development services to design, develop
 
 | Milestone | Timeline | Deliverables |
 |-----------|----------|--------------|
-| **M1: Foundation Complete** | End of Month 1 | Infrastructure code, Lambda framework, S3 triggers working |
-| **M2: Visual Analysis Complete** | End of Month 2 | Rekognition integration, AI narrative generation |
-| **M3: Audio Processing Complete** | End of Month 3 | Audio extraction, speech-to-text working |
-| **M4: POC Demo Ready** | End of Month 4 | Full pipeline, demo, documentation, final report |
+| **M1: Q1 Complete** | May 31, 2025 | Infrastructure code, Lambda framework, S3 triggers, Rekognition integration |
+| **M2: Q2 Complete** | August 31, 2025 | AI narrative generation, audio extraction, speech-to-text working |
+| **M3: Q3 Complete** | November 30, 2025 | Multi-modal synthesis, TTS integration, optimized pipeline |
+| **M4: Q4 & Final Delivery** | February 28, 2026 | Production-ready POC, comprehensive testing, final documentation |
 
-### 2.2 Final Deliverables (Month 4)
+### 2.2 Final Deliverables (February 2026)
 
 1. **Source Code**
    - Complete TypeScript codebase
@@ -143,15 +152,18 @@ The Developer agrees to provide software development services to design, develop
    - Code comments and inline documentation
 
 4. **Demo & Testing**
-   - Working demo with 5+ sample videos
-   - Test results and quality metrics
+   - Working demo with 20+ sample videos across various categories
+   - Comprehensive test results and quality metrics
    - Performance benchmark report
-   - Cost analysis report
+   - Detailed cost analysis report
+   - Scalability testing documentation
 
 5. **Knowledge Transfer**
-   - 2-hour technical walkthrough session
-   - Q&A documentation
+   - 4-hour technical walkthrough sessions (2 sessions)
+   - Comprehensive Q&A documentation
    - Handover of all credentials and access
+   - Video tutorials for system operation
+   - Troubleshooting guide
 
 ### 2.3 Acceptance Criteria
 
@@ -185,9 +197,15 @@ If Client does not respond within 5 business days, milestone is deemed accepted.
 - [ ] Processing cost under $1.00 per 5-minute video
 - [ ] Infrastructure costs within estimated budget
 
-### 3.2 Go/No-Go Decision Point
+### 3.2 Quarterly Review Points
 
-At the end of Month 4, Client will evaluate the POC results and decide:
+**Quarterly Reviews**: At the end of each quarter, Client will review progress:
+- **Q1 Review (May 2025)**: Evaluate foundation and infrastructure
+- **Q2 Review (August 2025)**: Assess AI integration and audio processing
+- **Q3 Review (November 2025)**: Review optimization and synthesis capabilities
+- **Q4 Review (February 2026)**: Final POC evaluation
+
+**Go/No-Go Decision Point**: At the end of February 2026, Client will evaluate the POC results and decide:
 - **GO**: Approve Phase 2 (MVP Development) - requires separate contract
 - **NO-GO**: Project concludes with Phase 1 deliverables
 
@@ -196,19 +214,21 @@ At the end of Month 4, Client will evaluate the POC results and decide:
 ## 4. TIMELINE & SCHEDULE
 
 ### 4.1 Project Duration
-- **Start Date**: _________________________________
-- **End Date**: _________________________________
-- **Total Duration**: 16 weeks (4 months)
+- **Start Date**: March 1, 2025
+- **End Date**: February 28, 2026
+- **Total Duration**: 12 months (52 weeks)
 
 ### 4.2 Working Hours
 - Developer will dedicate **2 Full-Time Equivalent (FTE)** engineers
-- Estimated effort: **320-400 hours per FTE** over 4 months
+- Estimated effort: **1,920-2,080 hours per FTE** over 12 months
 - Work schedule: Standard business days (Monday-Friday)
+- Peak periods during milestone deliveries
 
 ### 4.3 Communication Schedule
 - **Weekly Status Updates**: Every Friday by 5 PM
 - **Bi-Weekly Demo Meetings**: Every other Tuesday, 1 hour
-- **Monthly Milestone Reviews**: Last working day of each month
+- **Monthly Progress Reviews**: Last working day of each month
+- **Quarterly Milestone Reviews**: End of each quarter (formal presentations)
 - **Ad-hoc Communication**: Via email and agreed chat platform
 
 ### 4.4 Delays and Extensions
@@ -234,9 +254,10 @@ Compensation terms for Phase 1 POC development will be negotiated separately and
 
 **AWS infrastructure costs are separate**:
 - Client will provide AWS account or reimburse Developer for AWS costs
-- Estimated AWS costs: $330-500 for 4-month POC phase
+- Estimated AWS costs: $1,000-1,500 for 12-month POC phase
 - Developer will provide monthly AWS cost reports
 - Client is responsible for all AWS charges
+- Quarterly cost reviews to ensure budget alignment
 
 ### 5.3 Expenses
 
@@ -340,11 +361,11 @@ Developer specifically disclaims:
 
 ### 8.4 Warranty Period
 
-Developer provides a **30-day warranty** after final delivery:
+Developer provides a **90-day warranty** after final delivery (through May 31, 2026):
 - Developer will fix bugs and defects at no additional charge
 - Warranty covers defects in workmanship, not design changes
-- Client must report issues within 30 days of final delivery
-- After 30 days, bug fixes and enhancements will be subject to separate agreement
+- Client must report issues within 90 days of final delivery (February 28, 2026)
+- After 90 days, bug fixes and enhancements will be subject to separate agreement
 
 ---
 
@@ -474,9 +495,9 @@ All notices must be in writing and sent to:
 
 **Client**:
 ```
-Name: _________________________________________
-Address: ______________________________________
-Email: ________________________________________
+Name: Miller Consulting Specialist Limited
+Address: 110 Carlton Gore RoadNewmarket, Auckland 1023
+Email: info.millercc@gmail.com
 ```
 
 **Developer**:
@@ -566,10 +587,11 @@ Date: __________________________________________
 ### Appendix B: Sample Videos for Testing
 
 Client will provide Developer with:
-- Minimum 5 test videos
-- Various lengths (1-10 minutes)
-- Different content types (educational, entertainment, documentary)
-- Various formats (MP4, MOV, AVI)
+- Minimum 20 test videos (5 per quarter)
+- Various lengths (1-30 minutes)
+- Different content types (educational, entertainment, documentary, tutorial, interview)
+- Various formats (MP4, MOV, AVI, MKV)
+- Different quality levels (SD, HD, 4K)
 - Appropriate usage rights for testing
 
 ### Appendix C: Acceptance Testing Checklist
@@ -592,9 +614,9 @@ Developer Team:
 - DevOps Engineer: ________________________________
 
 Client Team:
-- Project Owner: ________________________________
-- Technical Contact: ________________________________
-- Business Contact: ________________________________
+- Project Owner: Yongchao Dai
+- Technical Contact: Yongchao Dai
+- Business Contact: 0275266555
 
 ---
 
@@ -609,9 +631,3 @@ Areas requiring particular legal attention:
 - Intellectual property assignment timing
 - Warranty limitations and liability caps
 - Compliance with local employment and tax laws
-
----
-
-*Document Version: 1.0*
-*Last Updated: _________________________________*
-*Reference: Movie2U Phase 1 POC Development Contract*
