@@ -3,10 +3,12 @@
 ## Project Overview
 
 **Client:** Karivita New Zealand Limited
+
 **Developer:** Miller Consulting Specialist Ltd
+
 **Contract Date:** June 25, 2025
+
 **Project Duration:** January 2026 - January 2027 (12 months)
-**Total Budget:** $153,000 + GST
 
 ---
 
